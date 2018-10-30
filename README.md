@@ -11,7 +11,13 @@ yolo_tiny: <a>https://drive.google.com/file/d/0B-yiAeTLLamRekxqVE01Yi1RRlk/view?
 ```
 	mv yolo_tiny.ckpt models/pretrain/ 
 ```
+### 预测阶段
+1、根据置信度确定每个框所属类别（置信度最大的类别）.
+2、设置置信度阈值，滤除低于置信度阈值的候选框.
+3、对剩余的预测框运行NMS算法，得到最终的预测框。
+同样需要注意的是NMS有两种解释，针对所有类别的NMS和针对单一类别的NMS算法，一般实现均为针对所有类别进行NMS操作～
 
+### 有一个疑问，就是在计算mAP的时候，通用的置信度阈值应该为多少？
 ### Train
 
 #### Train on pascal-voc2007 data 
