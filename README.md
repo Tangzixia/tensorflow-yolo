@@ -1,5 +1,7 @@
 # tensorflow-yolo
 
+### yolo和SSD、Faster RCNN等的区别在于没有设置先验框，因此预测出来的坐标并不是误差（SSD、Faster RCNN中），而是真正的位置坐标～
+
 ### Require
 	tensorflow-1.0
 ### download pretrained model
